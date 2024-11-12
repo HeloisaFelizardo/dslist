@@ -19,7 +19,11 @@ public class Game {
     private String platform;
     private Double score;
     private String imgUrl;
+
+    @Lob
     private String shortDescription;
+
+    @Lob
     private String longDescription;
 
     public Game() {
