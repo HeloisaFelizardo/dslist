@@ -15,21 +15,20 @@ public class Belonging {
 
     private Integer position;
 
-    public Belonging() {
-    }
-
-    public Belonging(Game game, GameList list) {
+    public void setGame(Game game) {
         id.setGame(game);
+    }
+
+    public Game getGame() {
+        return id.getGame();
+    }
+
+    public void setList(GameList list) {
         id.setList(list);
-        this.position = position;
     }
 
-    public BelongingPK getId() {
-        return id;
-    }
-
-    public void setId(BelongingPK id) {
-        this.id = id;
+    public GameList getList() {
+        return id.getList();
     }
 
     public Integer getPosition() {
@@ -45,11 +44,11 @@ public class Belonging {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Belonging belonging = (Belonging) o;
-        return Objects.equals(id, belonging.id);
+        return Objects.equals(id, belonging.id) && Objects.equals(position, belonging.position);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(id);
+        return Objects.hash(id, position);
     }
 }
