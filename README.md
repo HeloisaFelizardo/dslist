@@ -1,4 +1,4 @@
-# Projeto Games - Intensivão Java Spring (professor Nélio Alves) 🎮
+# Projeto DsList - Intensivão Java Spring (professor Nélio Alves) 🎮
 
 ## Overview
 This project is a Java Spring Boot application that manages a list of games. It uses an SQL database to store information about each game, including:
